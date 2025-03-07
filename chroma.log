@@ -1,0 +1,153 @@
+[33mWARNING[0m:  [04-03-2025 11:41:47] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [04-03-2025 11:41:48] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [04-03-2025 11:41:48] Starting component System
+[36mDEBUG[0m:    [04-03-2025 11:41:48] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [04-03-2025 11:41:48] Starting component SqliteDB
+[36mDEBUG[0m:    [04-03-2025 11:41:48] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [04-03-2025 11:41:48] Starting component Posthog
+[36mDEBUG[0m:    [04-03-2025 11:41:48] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [04-03-2025 11:41:48] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [04-03-2025 11:41:48] Starting component LocalExecutor
+[36mDEBUG[0m:    [04-03-2025 11:41:48] Starting component SegmentAPI
+[36mDEBUG[0m:    [04-03-2025 11:41:48] Starting component SimpleAsyncRateLimitEnforcer
+[32mINFO[0m:     [04-03-2025 11:41:49] Started server process [[36m31396[0m]
+[32mINFO[0m:     [04-03-2025 11:41:49] Waiting for application startup.
+[32mINFO[0m:     [04-03-2025 11:41:49] Application startup complete.
+[32mINFO[0m:     [04-03-2025 11:41:49] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[33mWARNING[0m:  [04-03-2025 11:41:50] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))': /batch/
+[33mWARNING[0m:  [04-03-2025 11:41:50] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))': /batch/
+[32mINFO[0m:     [04-03-2025 11:41:50] Backing off send_request(...) for 0.2s (requests.exceptions.SSLError: HTTPSConnectionPool(host='us.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))))
+[33mWARNING[0m:  [04-03-2025 11:41:51] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))': /batch/
+[33mWARNING[0m:  [04-03-2025 11:41:51] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))': /batch/
+[32mINFO[0m:     [04-03-2025 11:41:51] Backing off send_request(...) for 0.6s (requests.exceptions.SSLError: HTTPSConnectionPool(host='us.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))))
+[33mWARNING[0m:  [04-03-2025 11:41:52] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))': /batch/
+[33mWARNING[0m:  [04-03-2025 11:41:52] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))': /batch/
+[32mINFO[0m:     [04-03-2025 11:41:52] Backing off send_request(...) for 2.8s (requests.exceptions.SSLError: HTTPSConnectionPool(host='us.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))))
+[33mWARNING[0m:  [04-03-2025 11:41:55] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))': /batch/
+[33mWARNING[0m:  [04-03-2025 11:41:55] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))': /batch/
+[31mERROR[0m:    [04-03-2025 11:41:56] Giving up send_request(...) after 4 tries (requests.exceptions.SSLError: HTTPSConnectionPool(host='us.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))))
+[32mINFO[0m:     [04-03-2025 11:42:01] ::1:53074 - "GET / HTTP/1.1" 404
+[32mINFO[0m:     [04-03-2025 11:42:01] ::1:53074 - "GET /favicon.ico HTTP/1.1" 404
+[32mINFO[0m:     [04-03-2025 12:00:56] Shutting down
+[32mINFO[0m:     [04-03-2025 12:00:56] Waiting for application shutdown.
+[36mDEBUG[0m:    [04-03-2025 12:00:56] Stopping component System
+[36mDEBUG[0m:    [04-03-2025 12:00:56] Stopping component SegmentAPI
+[36mDEBUG[0m:    [04-03-2025 12:00:56] Stopping component LocalExecutor
+[36mDEBUG[0m:    [04-03-2025 12:00:56] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [04-03-2025 12:00:56] Stopping component SimpleAsyncRateLimitEnforcer
+[36mDEBUG[0m:    [04-03-2025 12:00:56] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [04-03-2025 12:00:56] Stopping component Posthog
+[36mDEBUG[0m:    [04-03-2025 12:00:56] Stopping component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [04-03-2025 12:00:56] Stopping component SqliteDB
+[36mDEBUG[0m:    [04-03-2025 12:00:56] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [04-03-2025 12:00:56] Application shutdown complete.
+[32mINFO[0m:     [04-03-2025 12:00:56] Finished server process [[36m31396[0m]
+[33mWARNING[0m:  [04-03-2025 12:05:58] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [04-03-2025 12:05:59] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [04-03-2025 12:05:59] Starting component System
+[36mDEBUG[0m:    [04-03-2025 12:05:59] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [04-03-2025 12:05:59] Starting component SqliteDB
+[36mDEBUG[0m:    [04-03-2025 12:05:59] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [04-03-2025 12:05:59] Starting component Posthog
+[36mDEBUG[0m:    [04-03-2025 12:05:59] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [04-03-2025 12:05:59] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [04-03-2025 12:05:59] Starting component LocalExecutor
+[36mDEBUG[0m:    [04-03-2025 12:05:59] Starting component SegmentAPI
+[36mDEBUG[0m:    [04-03-2025 12:05:59] Starting component SimpleAsyncRateLimitEnforcer
+[32mINFO[0m:     [04-03-2025 12:05:59] Started server process [[36m2236[0m]
+[32mINFO[0m:     [04-03-2025 12:05:59] Waiting for application startup.
+[32mINFO[0m:     [04-03-2025 12:05:59] Application startup complete.
+[32mINFO[0m:     [04-03-2025 12:05:59] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[33mWARNING[0m:  [04-03-2025 12:06:01] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))': /batch/
+[33mWARNING[0m:  [04-03-2025 12:06:01] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))': /batch/
+[32mINFO[0m:     [04-03-2025 12:06:02] Backing off send_request(...) for 0.4s (requests.exceptions.SSLError: HTTPSConnectionPool(host='us.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))))
+[33mWARNING[0m:  [04-03-2025 12:06:02] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))': /batch/
+[33mWARNING[0m:  [04-03-2025 12:06:02] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))': /batch/
+[32mINFO[0m:     [04-03-2025 12:06:03] Backing off send_request(...) for 1.3s (requests.exceptions.SSLError: HTTPSConnectionPool(host='us.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))))
+[33mWARNING[0m:  [04-03-2025 12:06:04] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))': /batch/
+[33mWARNING[0m:  [04-03-2025 12:06:04] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))': /batch/
+[32mINFO[0m:     [04-03-2025 12:06:05] Backing off send_request(...) for 3.9s (requests.exceptions.SSLError: HTTPSConnectionPool(host='us.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))))
+[33mWARNING[0m:  [04-03-2025 12:06:09] Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))': /batch/
+[33mWARNING[0m:  [04-03-2025 12:06:09] Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))': /batch/
+[31mERROR[0m:    [04-03-2025 12:06:09] Giving up send_request(...) after 4 tries (requests.exceptions.SSLError: HTTPSConnectionPool(host='us.i.posthog.com', port=443): Max retries exceeded with url: /batch/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)'))))
+[32mINFO[0m:     [04-03-2025 12:06:44] Shutting down
+[32mINFO[0m:     [04-03-2025 12:06:44] Waiting for application shutdown.
+[36mDEBUG[0m:    [04-03-2025 12:06:44] Stopping component System
+[36mDEBUG[0m:    [04-03-2025 12:06:44] Stopping component SegmentAPI
+[36mDEBUG[0m:    [04-03-2025 12:06:44] Stopping component LocalExecutor
+[36mDEBUG[0m:    [04-03-2025 12:06:44] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [04-03-2025 12:06:44] Stopping component SimpleAsyncRateLimitEnforcer
+[36mDEBUG[0m:    [04-03-2025 12:06:44] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [04-03-2025 12:06:44] Stopping component Posthog
+[36mDEBUG[0m:    [04-03-2025 12:06:44] Stopping component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [04-03-2025 12:06:44] Stopping component SqliteDB
+[36mDEBUG[0m:    [04-03-2025 12:06:44] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [04-03-2025 12:06:44] Application shutdown complete.
+[32mINFO[0m:     [04-03-2025 12:06:44] Finished server process [[36m2236[0m]
+[33mWARNING[0m:  [04-03-2025 12:07:03] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [04-03-2025 12:07:05] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [04-03-2025 12:07:05] Starting component System
+[36mDEBUG[0m:    [04-03-2025 12:07:05] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [04-03-2025 12:07:05] Starting component SqliteDB
+[36mDEBUG[0m:    [04-03-2025 12:07:05] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [04-03-2025 12:07:05] Starting component Posthog
+[36mDEBUG[0m:    [04-03-2025 12:07:05] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [04-03-2025 12:07:05] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [04-03-2025 12:07:05] Starting component LocalExecutor
+[36mDEBUG[0m:    [04-03-2025 12:07:05] Starting component SegmentAPI
+[36mDEBUG[0m:    [04-03-2025 12:07:05] Starting component SimpleAsyncRateLimitEnforcer
+[32mINFO[0m:     [04-03-2025 12:07:05] Started server process [[36m35648[0m]
+[32mINFO[0m:     [04-03-2025 12:07:05] Waiting for application startup.
+[32mINFO[0m:     [04-03-2025 12:07:05] Application startup complete.
+[32mINFO[0m:     [04-03-2025 12:07:05] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [04-03-2025 12:07:15] ::1:53774 - "GET / HTTP/1.1" 404
+[32mINFO[0m:     [04-03-2025 12:07:19] ::1:53774 - "GET / HTTP/1.1" 404
+[32mINFO[0m:     [04-03-2025 12:28:02] Shutting down
+[32mINFO[0m:     [04-03-2025 12:28:02] Waiting for application shutdown.
+[36mDEBUG[0m:    [04-03-2025 12:28:02] Stopping component System
+[36mDEBUG[0m:    [04-03-2025 12:28:02] Stopping component SegmentAPI
+[36mDEBUG[0m:    [04-03-2025 12:28:02] Stopping component LocalExecutor
+[36mDEBUG[0m:    [04-03-2025 12:28:02] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [04-03-2025 12:28:02] Stopping component SimpleAsyncRateLimitEnforcer
+[36mDEBUG[0m:    [04-03-2025 12:28:02] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [04-03-2025 12:28:02] Stopping component Posthog
+[36mDEBUG[0m:    [04-03-2025 12:28:02] Stopping component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [04-03-2025 12:28:02] Stopping component SqliteDB
+[36mDEBUG[0m:    [04-03-2025 12:28:02] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [04-03-2025 12:28:02] Application shutdown complete.
+[32mINFO[0m:     [04-03-2025 12:28:02] Finished server process [[36m35648[0m]
+[33mWARNING[0m:  [04-03-2025 12:49:18] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [04-03-2025 12:49:19] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [04-03-2025 12:49:19] Starting component System
+[36mDEBUG[0m:    [04-03-2025 12:49:19] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [04-03-2025 12:49:19] Starting component SqliteDB
+[36mDEBUG[0m:    [04-03-2025 12:49:20] Starting component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [04-03-2025 12:49:20] Starting component Posthog
+[36mDEBUG[0m:    [04-03-2025 12:49:20] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [04-03-2025 12:49:20] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [04-03-2025 12:49:20] Starting component LocalExecutor
+[36mDEBUG[0m:    [04-03-2025 12:49:20] Starting component SegmentAPI
+[36mDEBUG[0m:    [04-03-2025 12:49:20] Starting component SimpleAsyncRateLimitEnforcer
+[32mINFO[0m:     [04-03-2025 12:49:20] Started server process [[36m32180[0m]
+[32mINFO[0m:     [04-03-2025 12:49:20] Waiting for application startup.
+[32mINFO[0m:     [04-03-2025 12:49:20] Application startup complete.
+[32mINFO[0m:     [04-03-2025 12:49:20] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [04-03-2025 12:50:05] 127.0.0.1:56690 - "GET /api/v2/auth/identity HTTP/1.1" 200
+[32mINFO[0m:     [04-03-2025 12:50:06] 127.0.0.1:56693 - "GET /api/v2/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [04-03-2025 12:50:06] 127.0.0.1:56693 - "GET /api/v2/tenants/default_tenant/databases/default_database HTTP/1.1" 200
+[32mINFO[0m:     [04-03-2025 12:50:06] 127.0.0.1:56690 - "GET /api/v2/tenants/default_tenant/databases/default_database/collections/gstbot HTTP/1.1" 200
+[32mINFO[0m:     [04-03-2025 12:50:42] ::1:56707 - "GET / HTTP/1.1" 404
+[32mINFO[0m:     [05-03-2025 21:11:44] Shutting down
+[32mINFO[0m:     [05-03-2025 21:11:44] Waiting for application shutdown.
+[36mDEBUG[0m:    [05-03-2025 21:11:44] Stopping component System
+[36mDEBUG[0m:    [05-03-2025 21:11:44] Stopping component SegmentAPI
+[36mDEBUG[0m:    [05-03-2025 21:11:44] Stopping component LocalExecutor
+[36mDEBUG[0m:    [05-03-2025 21:11:44] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [05-03-2025 21:11:44] Stopping component SimpleAsyncRateLimitEnforcer
+[36mDEBUG[0m:    [05-03-2025 21:11:44] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [05-03-2025 21:11:44] Stopping component Posthog
+[36mDEBUG[0m:    [05-03-2025 21:11:44] Stopping component SimpleQuotaEnforcer
+[36mDEBUG[0m:    [05-03-2025 21:11:44] Stopping component SqliteDB
+[36mDEBUG[0m:    [05-03-2025 21:11:44] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [05-03-2025 21:11:44] Application shutdown complete.
+[32mINFO[0m:     [05-03-2025 21:11:44] Finished server process [[36m32180[0m]
