@@ -1,8 +1,10 @@
 import streamlit as st
 from langchain.embeddings.ollama import OllamaEmbeddings
-from langchain.vectorstores import Chroma
+from langchain_community.vectorstores import Chroma
 from langchain.prompts import ChatPromptTemplate
-from langchain.llms import Ollama
+from langchain_community.llms import Ollama
+from langchain_core.runnables import RunnablePassthrough
+from langchain_core.output_parsers import StrOutputParser
 
 # Define constants
 CHROMA_PATH = "chroma"
@@ -20,21 +22,42 @@ QUESTION: {question}
 ANSWER:
 """
 
-def query_rag(query_text):
-    embedding_function = get_embedding_function()
-    db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding_function)
-    results = db.similarity_search_with_score(query_text, k=5)
+def query_rag(query_text):    
+    # Step 1: Load Embeddings and Vector Store Retriever
+    embedding_function = OllamaEmbeddings(model="nomic-embed-text")
+    vectorstore = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding_function)
+    retriever = vectorstore.as_retriever(search_kwargs={"k": 5})  # Fetch top 5 similar docs
 
-    context_text = "\n\n---\n\n".join([doc.page_content for doc, _ in results])
-    prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
-    prompt = prompt_template.format(context=context_text, question=query_text)
+    # Step 2: Define Prompt Template
+    PROMPT_TEMPLATE = """
+    If the {question} is a generic conversation like "hi", "hello", or similar small talk, 
+    give a natural response without using the context. Otherwise, answer the question using the retrieved context:
 
-    model = Ollama(model="qwen2.5:1.5b")
-    response_text = model.invoke(prompt)
+    CONTEXT:
+    {context}
 
-    sources = [doc.metadata.get("id", None) for doc, _ in results]
-    return response_text, sources
+    QUESTION: {question}
+    ANSWER:
+    """
+    chatprompt = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
 
+    # Step 3: Define LLM
+    llm = Ollama(model="qwen2.5:1.5b")
+
+    # Step 4: Define Chain
+    chain = (
+        {
+            "context": retriever,  # Retrieve relevant documents
+            "question": RunnablePassthrough(),  # Pass the question directly
+        }
+        | chatprompt  # Format input into a structured prompt
+        | llm  # Generate response using the LLM
+        | StrOutputParser()  # Extract string output
+    )
+
+    # Step 5: Invoke the Chain    
+    response = chain.invoke(query_text)
+    return response
 # Streamlit UI
 st.set_page_config(page_title="RAG Q&A System", layout="wide")
 
@@ -46,13 +69,11 @@ query = st.text_input("Your Question", placeholder="Ask something...")
 if st.button("Submit"):
     if query:
         with st.spinner("Generating response..."):
-            response, sources = query_rag(query)
+            response = query_rag(query)
         
         st.subheader("Answer")
         st.write(response)
-        
-        st.subheader("Sources")
-        st.write(", ".join(sources) if sources else "No sources found")
+                
     else:
         st.warning("Please enter a question.")
 
@@ -61,6 +82,5 @@ st.markdown("""
 1. Your question is processed to find similar documents in the database.
 2. The most relevant documents are used as context.
 3. An LLM (Qwen2.5 1.5B) generates an answer based on the context.
-4. Sources are listed to provide traceability.
 """)
 
